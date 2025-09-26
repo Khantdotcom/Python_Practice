@@ -1,3 +1,4 @@
+from datetime import datetime
 number = 0
 
 assert(number < 1 ), "Fuck you"
@@ -35,15 +36,37 @@ if not any('add' in sublist for sublist in list_of_command.values()):
 list_of_command.values()
 
 gg = {
- 'add': {'error': "Invalid 'add' command. Expected 3 arguments.", 'length': 3},
- 'delete': {'error': "Invalid 'delete' command. Expected 2 arguments.", 'length': 2},
- 'list': {'error': "Invalid 'list' command. Expected 2 arguments.", 'length': 2},
- 'mark-done': {'error': "Invalid 'mark-done' command. Expected 2 arguments.", 'length': 2},
- 'mark-in-progress': {'error': "Invalid 'mark-in-progress' command. Expected 2 arguments.", 'length': 2},
- 'update': {'error': "Invalid 'update' command. Expected 3 arguments.", 'length': 3}
+ 'add': {'error': "Invalid 'add' command. Expected 3 arguments.", 'length': '3'},
+ 'delete': {'error': "Invalid 'delete' command. Expected 2 arguments.", 'length': '2'},
+ 'list': {'error': "Invalid 'list' command. Expected 2 arguments.", 'length': '2'},
+ 'mark-done': {'error': "Invalid 'mark-done' command. Expected 2 arguments.", 'length': '2'},
+ 'mark-in-progress': {'error': "Invalid 'mark-in-progress' command. Expected 2 arguments.", 'length': '2'},
+ 'update': {'error': "Invalid 'update' command. Expected 3 arguments.", 'length': '3'}
 }
 
-'add' in gg.keys()
+gg.keys()
 
 user = input('').split()
 user
+
+datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+'da'.capitalize()
+
+input = 'gg'
+
+import json
+
+s_json = '{"name": "Bob", "city": "New York"}'
+my_dict_json = json.loads(s_json)
+print(my_dict_json)
+print(type(my_dict_json))
+
+
+try:
+    with open(r'/home/unix/Documents/kmitl (copy 1)/academics/python/Real_journey/Python_Practice/CLI_Task_Tracker/task_database.json') as file:
+                read_data = file.read()
+except FileNotFoundError as err:
+            raise Exception(err)
+
+print(type(json.loads(read_data)))
