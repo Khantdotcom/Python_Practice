@@ -9,7 +9,8 @@ class InputHandling():
                 'list': {'error': "Invalid 'list' command. Expected 2 arguments.", 'length': 2},
                 'mark-done': {'error': "Invalid 'mark-done' command. Expected 2 arguments.", 'length': 2},
                 'mark-in-progress': {'error': "Invalid 'mark-in-progress' command. Expected 2 arguments.", 'length': 2},
-                'update': {'error': "Invalid 'update' command. Expected 3 arguments.", 'length': 3}
+                'update': {'error': "Invalid 'update' command. Expected 3 arguments.", 'length': 3},
+                'to-do' : {'error': "Invalid 'to-do' command. Expected 2 arguments.", 'length': 2}
         }
         groups = ['done','in-progess','to-do','all']
         '''Valid first command'''
