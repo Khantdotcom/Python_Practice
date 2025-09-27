@@ -25,4 +25,4 @@ class InputHandling():
             raise Exception(f"{list_of_command[self.user_input[0]]['error']}")
         return self.user_input
     def go_on(self):
-        return self.user_input == 'x'
+        return self.user_input[0] == 'x'
