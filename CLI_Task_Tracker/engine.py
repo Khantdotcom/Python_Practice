@@ -5,7 +5,7 @@ class DatabaseFunction():
     def __init__(self,database,input):
         self.database = database
         self.command = input[0]
-        self.id = input[1]
+        self.id = input[1] if len(input) > 1 else None
         if len(input) > 2:
            self.description = input[2]
         else:
