@@ -23,7 +23,9 @@ class DatabaseFunction():
             case 'mark-in-progress':
                 self.progress()
             case 'mark-done':
-                self.done()    
+                self.done()
+            case 'mark-to-do':
+                self.todo()    
     def add(self):
         if self.id in self.database.keys():
             self.update()
@@ -65,11 +67,18 @@ class DatabaseFunction():
             
     def progress(self):
         self.database[self.id]['status'] = 'in-progress'
+        self.database[self.id]['updated-at'] = self.now
         self.print_task()
         
     def done(self):
         self.database[self.id]['status'] = 'done'
+        self.database[self.id]['updated-at'] = self.now
         self.print_task()
+    def todo(self):
+        self.database[self.id]['status'] = 'done'
+        self.database[self.id]['updated-at'] = self.now
+        self.print_task()
+        
 
 
     def updated_database(self):
