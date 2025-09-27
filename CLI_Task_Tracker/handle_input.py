@@ -1,3 +1,4 @@
+'''handle_input.py'''
 class InputHandling():
     def __init__(self,database):
         self.database = database

@@ -1,3 +1,4 @@
+'''main.py'''
 from handle_input import InputHandling
 from load_tasks import LoadDatabase
 from engine import DatabaseFunction
