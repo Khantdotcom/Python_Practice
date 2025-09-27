@@ -49,18 +49,18 @@ class DatabaseFunction():
                     print(f"{value['description']} : {value['status']}")
             case 'to-do':
                 print("To-do Tasks")
-                for key_value in self.database.items():
+                for key,value in self.database.items():
                     if value['status'] == 'to-do':
                         print(f"{value['description']}")
 
             case 'done':
                 print("Done Tasks")
-                for key_value in self.database.items():
+                for key,value in self.database.items():
                     if value['status'] == 'done':
                         print(f"{value['description']}")
             case 'in-progress':
                 print("In progress Tasks")
-                for key_value in self.database.items():
+                for key,value in self.database.items():
                     if value['status'] == 'in-progress':
                         print(f"{value['description']}")
 
@@ -78,7 +78,7 @@ class DatabaseFunction():
         self.database[self.id]['status'] = 'done'
         self.database[self.id]['updated-at'] = self.now
         self.print_task()
-        
+
 
 
     def updated_database(self):
