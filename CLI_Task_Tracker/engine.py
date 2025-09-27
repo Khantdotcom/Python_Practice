@@ -5,7 +5,10 @@ class DatabaseFunction():
         self.database = database
         self.command = input[0]
         self.id = input[1]
-        self.description = input[2] if len(input) > 2 else None
+        if len(input) > 2:
+           self.description = input[2]
+        else:
+           self.description = self.database.get(self.id, {}).get('description')
         self.now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     def match_command(self):
         match self.command:
